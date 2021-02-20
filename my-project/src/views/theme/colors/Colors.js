@@ -1,3 +1,5 @@
+//Testing file for candlestick schema ( nevermind about it) [can be deleted]
+
 import React from 'react'
 import ReactApexChart from 'react-apexcharts'
 

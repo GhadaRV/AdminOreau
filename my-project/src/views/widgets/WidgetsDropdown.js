@@ -28,6 +28,8 @@ class WidgetsDropdown extends Component {
   }
 
   componentDidMount() {
+    // Recupération de la liste des utilisateurs :
+
     var obj = usersData;
     // var count = {usersData}.length;
     var keys = Object.keys(obj);
@@ -40,6 +42,9 @@ class WidgetsDropdown extends Component {
 
 
     /************************************************************************* */
+
+    // Filtrage et récupération de la liste des annotateurs
+
     var filteredAnnotateurs = [];
     var nbAnnotateurs = 0;
     for (var i = 0; i < usersData.length; i++) {
@@ -53,6 +58,9 @@ class WidgetsDropdown extends Component {
 
 
     /************************************************************************* */
+
+    // Filtrage et récupération de la liste des locuteurs
+
     var filteredLocuteurs = [];
     var nbrLocuteurs = 0;
     for (var i = 0; i < usersData.length; i++) {

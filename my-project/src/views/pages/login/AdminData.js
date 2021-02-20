@@ -1,4 +1,5 @@
 
+//Récupération de la liste des admins
 const apiUrl = 'http://localhost:3001/administrateur/admins';
 
 let adminData = [];

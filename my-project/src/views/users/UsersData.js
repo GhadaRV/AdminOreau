@@ -1,3 +1,4 @@
+// Fichier pour la récupération de la liste des utilisateurs à travers un Rest api url
 
 const apiUrl = 'http://localhost:3001/users';
 let usersData = [];

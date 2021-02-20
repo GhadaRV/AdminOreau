@@ -1,3 +1,5 @@
+// Affichage de la liste des utilisateurs dans un tableau
+
 import React, { useState, useEffect } from 'react'
 import { useHistory, useLocation } from 'react-router-dom'
 import {
@@ -13,15 +15,6 @@ import {
 
 import usersData from './UsersData'
 
-const getBadge = status => {
-  switch (status) {
-    case 'Active': return 'success'
-    case 'Inactive': return 'secondary'
-    case 'Pending': return 'warning'
-    case 'Banned': return 'danger'
-    default: return 'primary'
-  }
-}
 
 const Users = () => {
   const history = useHistory()
@@ -30,7 +23,7 @@ const Users = () => {
   const [page, setPage] = useState(currentPage)
 
   const pageChange = newPage => {
-    currentPage !== newPage && history.push(`/users?page=${newPage}`)
+    currentPage !== newPage && history.push(`/users?page=${newPage}`) // pagination de la liste des utilisateurs
   }
 
   useEffect(() => {
@@ -59,14 +52,7 @@ const Users = () => {
               clickableRows
               onRowClick={(item) => history.push(`/users/${item.id}`)}
               scopedSlots={{
-                'status':
-                  (item) => (
-                    <td>
-                      <CBadge color={getBadge(item.status)}>
-                        {item.status}
-                      </CBadge>
-                    </td>
-                  )
+
               }}
             />
             <CPagination

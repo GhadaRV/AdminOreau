@@ -1,3 +1,5 @@
+// [can be deleted]
+
 export const dataSource = [{
   date: new Date(1994, 2, 1),
   l: 24.00,

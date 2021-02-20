@@ -1,5 +1,7 @@
 
-const apiUrl = 'http://localhost:3001/users';
+//Récupération de la liste des personnes bloqués ( à modifier)
+
+const apiUrl = 'http://localhost:3001/users'; // faut changer l'url ici
 let blockedUsersData = [];
 
 

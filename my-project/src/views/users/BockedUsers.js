@@ -1,3 +1,5 @@
+//Liste des utilisateurs bloqués (pas encore terminée)
+
 import React, { useState, useEffect } from 'react'
 import { useHistory, useLocation } from 'react-router-dom'
 import {
@@ -13,15 +15,7 @@ import {
 
 import blockedUsersData from './BlockedUsersData'
 
-const getBadge = status => {
-  switch (status) {
-    case 'Active': return 'success'
-    case 'Inactive': return 'secondary'
-    case 'Pending': return 'warning'
-    case 'Banned': return 'danger'
-    default: return 'primary'
-  }
-}
+
 
 const BlockedUsers = () => {
   const history = useHistory()
@@ -59,14 +53,7 @@ const BlockedUsers = () => {
               clickableRows
               onRowClick={(item) => history.push(`/users/${item.id}`)}
               scopedSlots={{
-                'status':
-                  (item) => (
-                    <td>
-                      <CBadge color={getBadge(item.status)}>
-                        {item.status}
-                      </CBadge>
-                    </td>
-                  )
+
               }}
             />
             <CPagination

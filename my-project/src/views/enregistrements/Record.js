@@ -1,3 +1,5 @@
+//Visusalisation des détails d'un seul enregistrement en cliquant sur sa ligne sur le tableau
+
 import React from 'react'
 import { CCard, CCardBody, CCardHeader, CCol, CRow } from '@coreui/react'
 import CIcon from '@coreui/icons-react'

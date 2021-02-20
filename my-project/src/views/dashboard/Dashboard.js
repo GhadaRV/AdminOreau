@@ -1,3 +1,5 @@
+//Page pour visualiser le dashboard : Tableau de bord
+
 import React, { lazy } from 'react'
 import {
   CBadge,
@@ -44,6 +46,8 @@ class Dashboard extends Component {
   }
 
   componentDidMount() {
+
+    //Récupération de la liste des utilisateurs
     var obj = usersData;
 
 
@@ -58,6 +62,8 @@ class Dashboard extends Component {
 
     this.setState({ countUsers: count });
     /************************************************************************* */
+
+    //Récupération de la liste des utilisateurs féminins
 
     var filteredFemale = [];
     var nbrFemale = 0;
@@ -74,6 +80,8 @@ class Dashboard extends Component {
     console.log('females', nbrFemale);
 
     /************************************************************************* */
+    //Récupération de la liste des utilisateurs masculins
+
     var filteredMale = [];
     var nbrMale = 0;
     var perMales = 0;
@@ -89,6 +97,9 @@ class Dashboard extends Component {
     console.log('Males', nbrMale);
 
     /************************************************************************* */
+
+    //Récupération de la liste des annotateurs
+
     var filteredAnnotateurs = [];
     var nbrAnnotateurs = 0;
     for (var i = 0; i < usersData.length; i++) {
@@ -102,6 +113,8 @@ class Dashboard extends Component {
 
 
     /************************************************************************* */
+    //Récupération de la liste des locuteurs
+
     var filteredLocuteurs = [];
     var nbrLocuteurs = 0;
     for (var i = 0; i < usersData.length; i++) {
@@ -114,7 +127,7 @@ class Dashboard extends Component {
     console.log('Locuteurs', nbrLocuteurs);
 
     /************************************************************************* */
-
+    //Récupération de la liste des enregistrements acceptés
     var obj = acceptedRecords;
 
 
@@ -123,6 +136,8 @@ class Dashboard extends Component {
 
     this.setState({ countAcceptedRecords: countacceptedRecords });
     /********************************************************************/
+    //Récupération de la pourcentage du corpus annoté
+
     var x = [];
     var nbrAnnoté = 0;
     var perCorpusAnnoté = 0;
@@ -139,6 +154,8 @@ class Dashboard extends Component {
     console.log('perAnnoté', perCorpusAnnoté);
 
     /********************************************************************/
+
+    //Récupération de la pourcentage du corpus non annoté
     var y = [];
     var nbrNonAnnoté = 0;
     var perCorpusNonAnnoté = 0;
@@ -155,6 +172,8 @@ class Dashboard extends Component {
     console.log('perNonAnnoté', perCorpusNonAnnoté);
 
     /********************************************************************/
+
+    //Récupération de la liste des nouveaux utilisateurs
     var newUsersList = [];
     var t = new Date()
     var today = t.getFullYear() + '-' + (t.getMonth() + 1) + '-' + t.getDate();
@@ -183,6 +202,7 @@ class Dashboard extends Component {
 
 
     /********************************************************************/
+    //Récupération de la liste des utilisateurs qui n'ont pas participé ni dans l'enregistrement ni dans l'annotation
     var noParticipation = [];
 
     for (var i = 0; i < usersData.length; i++) {
