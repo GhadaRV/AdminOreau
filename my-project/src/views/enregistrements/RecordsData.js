@@ -1,3 +1,4 @@
+//Récupération de la liste des enregistrements bruts
 
 const apiUrl = 'http://localhost:3001/enregistrement-brut';
 let recordsData = [];
